@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paragraph with Ads</title>
+<script src="ads.js"></script>
+<div class="nam"><h1>MeetMe</h1></div>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #4CAF50;
+    padding: 20px;
+    margin: 0; /* page margin remove */
+    overflow-x: hidden; /* horizontal scroll বন্ধ */
+  }
+  .nam{
+  
+    display: white;   /* একটার নিচে একটা বসবে */
+    text-decoration: none;
+    margin: 15px auto;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 200px;
+  }
+    
+  
+
+  h1 {
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  p {
+    margin: 10px 0;
+    color: black;
+  }
+
+  /* ✅ Full Width Banner Ads */
+  .ad-banner {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 120px;          /* fixed height */
+    line-height: 120px;     /* vertical center */
+    text-align: center;      /* horizontal center */
+    background-color: #e0e0e0;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;  /* padding+border ঠিক থাকবে */
+    margin: 15px 0;          /* উপরে নিচে space */
+  }
+  .qa-container {
+    margin-top: 50px; /* সব paragraph+ads এর নিচে থাকবে */
+  }
+
+  /* QA Box Style */
+  .qa-box {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: left;
+  }
+
+  .qa-box label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .qa-box input, .qa-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .qa-box textarea {
+    resize: vertical;
+  }
+  .btn {
+      display: block;   /* একটার নিচে একটা বসবে */
+      text-decoration: none;
+      margin: 15px auto;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background: black;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 200px;
+    }
+    .paragraph-box {
+      width: 80%;
+      max-width: 600px;
+      padding: 15px;
+      margin: 20px auto;
+      font-size: 18px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background: white;
+      color: black;
+      text-align: left;
+    }
+</style>
+</head>
+<body>
+
+<h1>welcom to page-10</h1>
+
+<div id="content">
+  <p>Paragraph line 1</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 1 🚩</div>
+
+  <p>Paragraph line 2</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 2 🚩</div>
+
+  <p>Paragraph line 3</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 3 🚩</div>
+
+  <p>Paragraph line 4</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 4 🚩</div>
+
+  <p>Paragraph line 5</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 5 🚩</div>
+
+  <p>Paragraph line 6</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 6 🚩</div>
+
+  <p>Paragraph line 7</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 7 🚩</div>
+
+  <p>Paragraph line 8</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 8 🚩</div>
+
+  <p>Paragraph line 9</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 9 🚩</div>
+
+  <p>Paragraph line 10</p>
+  <div class="ad-banner">🚩 Banner Ads Placeholder 10 🚩</div>
+</div>
+<!-- Question boxes সব নীচে -->
+<div class="qa-container">
+  <div class="qa-box">
+    <label for="q1">Question 1:</label>
+    <input type="text" id="q1" value="Write your question here" readonly>
+    <label for="a1">Answer 1:</label>
+    <textarea id="a1" rows="3" placeholder="Enter your answer here"></textarea>
+    <button class="qa-send-btn" onclick="submitAnswer(1)">Send</button>
+  </div>
+
+  <div class="qa-box">
+    <label for="q2">Question 2:</label>
+    <input type="text" id="q2" value="Write your question here" readonly>
+    <label for="a2">Answer 2:</label>
+    <textarea id="a2" rows="3" placeholder="Enter your answer here"></textarea>
+    <button class="qa-send-btn" onclick="submitAnswer(2)">Send</button>
+  </div>
+
+  <div class="qa-box">
+    <label for="q3">Question 3:</label>
+    <input type="text" id="q3" value="Write your question here" readonly>
+    <label for="a3">Answer 3:</label>
+    <textarea id="a3" rows="3" placeholder="Enter your answer here"></textarea>
+    <button class="qa-send-btn" onclick="submitAnswer(3)">Send</button>
+  </div>
+</div  <!-- ✅ Paragraph Box -->
+  <div class="paragraph-box">
+    এখানে তোমার লেখা থাকব
+    ghgghhjhgf
+    hujkkkjhvj
+    yujjbb.
+    gjnbgdtjbcf
+    ftjjknct
+    ggujkhf
+    ggj
+  </div>
+
+ <a href="Homepage.html" class="btn">Back to Home page </a>
+<style>
+  .qa-send-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+  }
+
+  .qa-send-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+
+  input[readonly] {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #555;
+  }
+</style>
+
+<script>
+  function submitAnswer(num) {
+    const question = document.getElementById('q'+num).value;
+    const answer = document.getElementById('a'+num).value;
+    if(answer.trim() === "") {
+      alert("Please enter your answer!");
+      return;
+    }
+    alert("Question "+num+" submitted!\nQuestion: "+question+"\nAnswer: "+answer);
+    // এখানে তুমি চাইলে AJAX দিয়ে server এ পাঠাতে পারো
+  }
+</script>
+
+<style>
+  .qa-send-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+  }
+
+  .qa-send-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+</style>
+
+<script>
+  function submitAnswer(num) {
+    const question = document.getElementById('q'+num).value;
+    const answer = document.getElementById('a'+num).value;
+    if(question.trim() === "" || answer.trim() === "") {
+      alert("Please fill both question and answer!");
+      return;
+    }
+    alert("Question "+num+" submitted!\nQuestion: "+question+"\nAnswer: "+answer);
+    // এখানে তুমি চাইলে AJAX দিয়ে server এ পাঠাতে পারো
+  }
+</script>
+
+
+</body>
+</html>
