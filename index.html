@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeetMe</title>
+  <script src="ads.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('pic.png') no-repeat center center/cover;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+      margin: 20px;
+      text-align: center;
+    }
+
+    /* Common Ad Banner */
+    .ad-banner {
+      max-width: 800px;
+      margin: 10px auto;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      color: yellow;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* General Box Styling */
+    .box, .question-box, .paragraph-box, .payment-box {
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px 30px;
+    }
+
+    .box, .paragraph-box {
+      background: rgba(0,0,0,0.6);
+      text-align: justify;
+    }
+
+    .question-box {
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .question-box label {
+      font-size: 18px;
+    }
+
+    .question-box input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+    }
+
+    .question-box button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .question-box button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .payment-box {
+      background: rgba(0,0,0,0.6);
+      text-align: left;
+    }
+
+    .payment-box h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .payment-box label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .payment-box input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .payment-box input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .payment-box button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .payment-box button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    btn {
+      display: block;
+      margin: 50px auto 100px auto;
+      padding: 15px 40px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn {
+  display: inline-block;   /* block দিলে পুরো লাইন নেবে, inline-block দিলে সাইজমতো থাকবে */
+  text-decoration: none;   /* লিঙ্কের underline চলে যাবে */
+  text-align: center;
+  margin: 50px auto 100px auto;
+  padding: 15px 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+      header {
+        font-size: 22px;
+        margin: 15px;
+      }
+      .box, .question-box, .paragraph-box, .payment-box {
+        padding: 15px 20px;
+        margin: 20px auto;
+      }
+      .payment-box h3 {
+        font-size: 18px;
+      }
+      .question-box label, .payment-box label {
+        font-size: 16px;
+      }
+      .btn {
+        padding: 12px 25px;
+        font-size: 18px;
+      }
+      .ad-banner {
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>MeetMe</header>
+
+  <!-- Common Ad Banner -->
+  <div class="ad-banner">
+    Ad Banner: এখানে আপনার বিজ্ঞাপন দেখানো হবে
+  </div>
+
+  <div class="box">
+    <p>
+      মূল content paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+    <!-- Common Ad Banner -->
+  <div class="ad-banner">
+    Ad Banner: এখানে আপনার বিজ্ঞাপন দেখানো হবে
+  </div>
+
+  <div class="question-box">
+    <label for="answer">প্রশ্ন: তুমি আজকে কেমন অনুভব করছো?</label>
+    <input type="text" id="answer" placeholder="উত্তর এখানে লিখুন...">
+    <button type="button" onclick="sendAnswer()">Send</button>
+  </div>
+  <!-- Common Ad Banner -->
+  <div class="ad-banner">
+    Ad Banner: এখানে আপনার বিজ্ঞাপন দেখানো হবে
+  </div>
+
+  <div class="paragraph-box">
+    <p>
+      Payment সংক্রান্ত তথ্য: এখানে আপনি আপনার পছন্দের payment method নির্বাচন করতে পারেন এবং account number প্রদান করতে পারেন। সকল তথ্য নিরাপদভাবে সংরক্ষিত হবে।
+    </p>
+  </div>
+  <!-- Common Ad Banner -->
+  <div class="ad-banner">
+    Ad Banner: এখানে আপনার বিজ্ঞাপন দেখানো হবে
+  </div>
+
+  <div class="payment-box">
+    <h3>Payment Method</h3>
+    <label><input type="radio" name="payment" value="credit"> Credit Card</label>
+    <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+    <label><input type="radio" name="payment" value="mobile"> Mobile Banking</label>
+    <label><input type="radio" name="payment" value="bkash"> Bkash</label>
+    <label><input type="radio" name="payment" value="nogod"> Nogod</label>
+
+    <input type="text" id="accountNumber" placeholder="Account Number / ID">
+
+    <button type="button" onclick="payNow()">Pay Now</button>
+  </div>
+  <!-- Common Ad Banner -->
+  <div class="ad-banner">
+    Ad Banner: এখানে আপনার বিজ্ঞাপন দেখানো হবে
+  </div>
+    <div class="paragraph-box">
+    <p>
+      Payment সংক্রান্ত তথ্য: এখানে আপনি আপনার পছন্দের payment method নির্বাচন করতে পারেন এবং account number প্রদান করতে পারেন। সকল তথ্য নিরাপদভাবে সংরক্ষিত হবে।
+    </p>
+
+ <a href="#" class="btn" onclick="handleClick(event)">Click Me</a>
+
+  <!-- Common Ad Banner -->
+  <div class="ad-banner">
+    Ad Banner: এখানে আপনার বিজ্ঞাপন দেখানো হবে
+  </div>
+  <script>
+  let firstClick = true; // প্রথমবার ট্র্যাক করবে
+
+  function handleClick(event) {
+    event.preventDefault(); // লিঙ্ক সরাসরি ওপেন হওয়া বন্ধ করবে
+
+    if (firstClick) {
+      alert("এখানে আপনার বিজ্ঞাপন দেখানো হবে 📢"); // প্রথমবার বিজ্ঞাপন দেখাবে
+      firstClick = false; // এবার থেকে দ্বিতীয়বার হবে
+    } else {
+      window.location.href = "Homepage.html"; // দ্বিতীয়বার পেজে যাবে
+    }
+  }
+</script>
+  <script>
+    function sendAnswer() {
+      const answer = document.getElementById('answer').value;
+      if(answer.trim() !== "") {
+        alert("তোমার উত্তর পাঠানো হয়েছে: " + answer);
+        document.getElementById('answer').value = "";
+      } else {
+        alert("উত্তর লিখো আগে।");
+      }
+    }
+
+    function payNow() {
+      const paymentOptions = document.getElementsByName('payment');
+      let selected = null;
+      paymentOptions.forEach(option => {
+        if(option.checked) selected = option.value;
+      });
+
+      if(!selected) {
+        alert("Payment method নির্বাচন করুন।");
+        return;
+      }
+
+      const accountNumber = document.getElementById('accountNumber').value.trim();
+      if(!accountNumber) {
+        alert("Account Number / ID দিন।");
+        return;
+      }
+
+      alert("Payment method: " + selected + ", Account: " + accountNumber);
+    }
+  </script>
+</body>
+</html>
